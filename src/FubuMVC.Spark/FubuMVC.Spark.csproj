@@ -46,9 +46,9 @@
     <Reference Include="HtmlTags">
       <HintPath>..\packages\HtmlTags.1.2.0.122\lib\4.0\HtmlTags.dll</HintPath>
     </Reference>
-    <Reference Include="Spark, Version=1.7.0.0, Culture=neutral, PublicKeyToken=7f8549eed921a12c, processorArchitecture=MSIL">
+    <Reference Include="Spark">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Spark.1.7.4.0\lib\NET40\Spark.dll</HintPath>
+      <HintPath>..\packages\Spark.1.7.5.0\lib\NET40\Spark.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,6 +64,7 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="PathExtensions.cs" />
     <Compile Include="Rendering\IHtmlEncoder.cs" />
     <Compile Include="Rendering\ViewDefinitionPolicy.cs" />
     <Compile Include="Registration\ViewDescriptorHelper.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Rendering\ViewDefinitionResolver.cs" />
     <Compile Include="Rendering\ViewEntryProviderCache.cs" />
     <Compile Include="SparkEngineSettings.cs" />
+    <Compile Include="SparkModel\FubuPartialProvider.cs" />
     <Compile Include="SparkModel\SharingAttachers.cs" />
     <Compile Include="SparkModel\FubuBindingProvider.cs" />
     <Compile Include="Rendering\ViewModifiers.cs" />

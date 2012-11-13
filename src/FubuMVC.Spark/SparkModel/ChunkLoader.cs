@@ -42,7 +42,7 @@ namespace FubuMVC.Spark.SparkModel
             return new ViewLoader
             {
                 SyntaxProvider = _syntaxProvider,
-                ViewFolder = _viewFolder(root),
+                ViewFolder = _viewFolder(root)
             };
         }
     }
