@@ -157,7 +157,6 @@
     <Content Include="Templates\A4.spark">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="packages.config" />
     <None Include="Templates\App\fubu-packages\Package1\WebContent\Handlers\Models\SerieGx.spark">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -107,9 +107,6 @@
     <Compile Include="ViewsForActionFiltersTester.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="FakeViews\Folder1\A.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
