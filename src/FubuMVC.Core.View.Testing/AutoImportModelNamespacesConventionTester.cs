@@ -29,11 +29,11 @@ namespace FubuMVC.Core.View.Testing
         [Test]
         public void when_auto_import_is_false_namespaces_are_not_added()
         {
-	    _registry.AlterSettings<CommonViewNamespaces>(x => x.DontAutoImportModelNamespaces());
+	    _registry.AlterSettings<CommonViewNamespaces>(x => x.DontAutoImportWhenNamespaceStartsWith("Fubu"));
 
             var graph = BehaviorGraph.BuildFrom(_registry);
             var commonViewNamespaces = graph.Settings.Get<CommonViewNamespaces>();
-            commonViewNamespaces.Namespaces.ShouldHaveCount(0);
+            commonViewNamespaces.Namespaces.ShouldHaveTheSameElementsAs("FakeTestNamespaceForAutoImport");
         }
     }
 

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using FubuMVC.Core.Registration;
 
 namespace FubuMVC.Core.View
@@ -8,19 +10,25 @@ namespace FubuMVC.Core.View
         public void Configure(BehaviorGraph graph)
         {
             var settings = graph.Settings.Get<CommonViewNamespaces>();
-            if (settings.AutoImportModelNamespaces)
+            graph.Actions().Each(a =>
             {
-                graph.Actions().Each(a =>
+                if (a.HasInput)
                 {
-                    if (a.HasInput)
-                    {
-                        settings.Add(a.InputType().Namespace);
-                    }
-                    if (a.HasOutput)
-                    {
-                        settings.Add(a.OutputType().Namespace);
-                    }
-                });
+                    AddImport(settings, () => a.InputType().Namespace);
+                }
+                if (a.HasOutput)
+                {
+                    AddImport(settings, () => a.OutputType().Namespace);
+                }
+            });
+        }
+
+        private void AddImport(CommonViewNamespaces commonViewNamespaces, Func<string> namespaceSelector)
+        {
+            var modelNamespace = namespaceSelector();
+            if (!commonViewNamespaces.IgnoredNamespacesForAutoImport.Any(modelNamespace.StartsWith))
+            {
+                commonViewNamespaces.Add(modelNamespace);
             }
         }
     }

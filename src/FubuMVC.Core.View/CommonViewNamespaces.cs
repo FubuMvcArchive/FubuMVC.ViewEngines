@@ -5,18 +5,18 @@ namespace FubuMVC.Core.View
     public class CommonViewNamespaces
     {
         private readonly IList<string> _namespaces = new List<string>();
-        private bool _autoImportModelNamespaces = true;
+        private readonly IList<string> _namespacesNotAutoImported = new List<string>();
 
         public void AddForType<T>()
         {
             _namespaces.Fill(typeof(T).Namespace);
         }
 
-	public void DontAutoImportModelNamespaces()
-	{
-	    _autoImportModelNamespaces = false;
-	}
-        
+        public void DontAutoImportWhenNamespaceStartsWith(string namespacePrefix)
+        {
+            _namespacesNotAutoImported.Add(namespacePrefix);
+        }
+
         public void Add(string @namespace)
         {
             _namespaces.Fill(@namespace);
@@ -27,9 +27,9 @@ namespace FubuMVC.Core.View
             get { return _namespaces; }
         }
 
-        public bool AutoImportModelNamespaces
+        public IEnumerable<string> IgnoredNamespacesForAutoImport
         {
-            get { return _autoImportModelNamespaces; }
+            get { return _namespacesNotAutoImported; }
         }
     }
 }
