@@ -122,6 +122,7 @@
     <Compile Include="Rendering\RenderStrategies.cs" />
     <Compile Include="Rendering\ViewModifiers.cs" />
     <Compile Include="Rendering\ViewRenderer.cs" />
+    <Compile Include="AutoImportModelNamespacesConvention.cs" />
     <Compile Include="ViewEngines.cs" />
     <Compile Include="ViewEnginesExtension.cs" />
     <Compile Include="ViewNode.cs" />
