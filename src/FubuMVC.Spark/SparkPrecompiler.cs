@@ -16,18 +16,21 @@ namespace FubuMVC.Spark
     {
         private readonly ISparkTemplateRegistry _templates;
         private readonly IViewEntryProviderCache _providerCache;
+        private readonly SparkEngineSettings _settings;
         private Action<IPackageLog> _activation;
 
-        public SparkPrecompiler(ISparkTemplateRegistry templates, IViewEntryProviderCache providerCache)
+        public SparkPrecompiler(ISparkTemplateRegistry templates, IViewEntryProviderCache providerCache, SparkEngineSettings settings)
         {
             _templates = templates;
             _providerCache = providerCache;
+            _settings = settings;
+
             UseActivation(p => Task.Factory.StartNew(() => Precompile(p)));
         }
 
         public void Activate(IEnumerable<IPackageInfo> packages, IPackageLog log)
         {
-            if(FubuMode.InDevelopment()) return;
+            if (!_settings.PrecompileViews) return;
             _activation(log);
         }
 

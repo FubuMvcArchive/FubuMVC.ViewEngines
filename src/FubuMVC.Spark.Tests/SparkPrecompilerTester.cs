@@ -15,8 +15,14 @@ namespace FubuMVC.Spark.Tests
     [TestFixture]
     public class SparkPrecompilerTester : InteractionContext<SparkPrecompiler>
     {
+        private SparkEngineSettings theSettings;
+
         protected override void beforeEach()
         {
+            theSettings = new SparkEngineSettings();
+
+            Services.Inject(theSettings);
+
             var descriptor1 = new SparkDescriptor(new Template("a.spark", "root", "origin"));
             var descriptor2 = new SparkDescriptor(new Template("b.spark", "root", "origin"));
             var nativePartial = new SparkDescriptor(new Template("_Yeah.spark", "root", "origin"));
@@ -47,6 +53,18 @@ namespace FubuMVC.Spark.Tests
             ClassUnderTest.Activate(MockFor<IEnumerable<IPackageInfo>>(), MockFor<IPackageLog>());
 
             activated.ShouldBeTrueBecause("Chuck Norris would otherwise switch to RoR or MS MVC");
+        }
+
+        [Test]
+        public void does_not_activate_when_setting_is_set_to_false()
+        {
+            var activated = false;
+            theSettings.PrecompileViews = false;
+            
+            ClassUnderTest.UseActivation(p => activated = true);
+            ClassUnderTest.Activate(MockFor<IEnumerable<IPackageInfo>>(), MockFor<IPackageLog>());
+
+            activated.ShouldBeFalse();
         }
 
         [Test]

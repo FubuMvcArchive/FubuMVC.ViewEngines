@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using FubuCore;
 using FubuCore.Util;
+using FubuMVC.Core;
 using FubuMVC.Core.View.Model;
 using FubuMVC.Spark.SparkModel;
 using Spark;
@@ -10,12 +11,15 @@ namespace FubuMVC.Spark
 {
     public class SparkEngineSettings
     {
-        private CompositeAction<TemplateComposer<ITemplate>> _configurations = new CompositeAction<TemplateComposer<ITemplate>>(); 
+        private CompositeAction<TemplateComposer<ITemplate>> _configurations = new CompositeAction<TemplateComposer<ITemplate>>();
+        private Func<bool> _precompileViews; 
 
         public SparkEngineSettings()
         {
             defaultSearch();
             defaultComposer();
+
+            _precompileViews = () => !FubuMode.InDevelopment();
         }
 
         private void defaultSearch()
@@ -66,5 +70,14 @@ namespace FubuMVC.Spark
         }
 
         public FileSet Search { get; private set; }
+
+        /// <summary>
+        /// By default, FubuMVC.Spark will precompile views if FubuMode.InDevelopment() is false.
+        /// </summary>
+        public bool PrecompileViews
+        {
+            get { return _precompileViews(); }
+            set { _precompileViews = () => value; }
+        }
     }
 }

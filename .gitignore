@@ -27,3 +27,4 @@ results
 bottles.cmd
 *.SolutionBuild*
 *.DotSettings
+logs
