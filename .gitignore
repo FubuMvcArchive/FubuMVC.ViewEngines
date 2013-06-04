@@ -28,3 +28,4 @@ bottles.cmd
 *.SolutionBuild*
 *.DotSettings
 logs
+Gemfile.lock
