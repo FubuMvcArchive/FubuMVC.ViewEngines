@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuMVC.Razor.Tests", "Fubu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewEngineIntegrationTesting", "ViewEngineIntegrationTesting\ViewEngineIntegrationTesting.csproj", "{08545D11-3500-4EA9-BB8A-4914C7A3FBAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuMVC.ViewEngines.Docs", "FubuMVC.ViewEngines.Docs\FubuMVC.ViewEngines.Docs.csproj", "{D0EA9374-BFD8-47C9-98A2-3D9A4161EC0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{08545D11-3500-4EA9-BB8A-4914C7A3FBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08545D11-3500-4EA9-BB8A-4914C7A3FBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08545D11-3500-4EA9-BB8A-4914C7A3FBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EA9374-BFD8-47C9-98A2-3D9A4161EC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EA9374-BFD8-47C9-98A2-3D9A4161EC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EA9374-BFD8-47C9-98A2-3D9A4161EC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EA9374-BFD8-47C9-98A2-3D9A4161EC0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

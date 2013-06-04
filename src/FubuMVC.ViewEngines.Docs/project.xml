@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ProjectRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TagLine>View Engine support for FubuMVC applications</TagLine>
+  <Name>FubuMVC.ViewEngines</Name>
+  <GitHubPage>http://github.com/DarthFubuMVC/FubuMVC.ViewEngines</GitHubPage>
+  <UserGroupUrl>https://groups.google.com/forum/?fromgroups#!forum/fubumvc-devel</UserGroupUrl>
+  <BuildServerUrl>http://build.fubu-project.org/project.html?projectId=project41&amp;tab=projectOverview</BuildServerUrl>
+  <BottleName>FubuMVC.ViewEngines.Docs</BottleName>
+  <TeamCityBuildType>bt72</TeamCityBuildType>
+  <Nugets>
+    <PublishedNuget>
+      <Name>FubuMVC.Core.View</Name>
+      <Description>Shared support for FubuMVC view engines</Description>
+    </PublishedNuget>
+    <PublishedNuget>
+      <Name>FubuMVC.Razor</Name>
+      <Description>Support for using the Razor view engine within a FubuMVC application.</Description>
+    </PublishedNuget>
+    <PublishedNuget>
+      <Name>FubuMVC.Spark</Name>
+      <Description>Support for using the Spark view engine within a FubuMVC application.</Description>
+    </PublishedNuget>
+  </Nugets>
+  <Url>fubumvc.viewengines</Url>
+</ProjectRoot>
