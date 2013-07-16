@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
+using FubuMVC.Core.Urls;
 
 namespace FubuMVC.Core.View
 {
@@ -21,6 +22,7 @@ namespace FubuMVC.Core.View
             {
                 var chain = BehaviorChain.ForWriter(new ViewNode(v));
                 chain.IsPartialOnly = true;
+                chain.UrlCategory.Category = Categories.VIEW;
 
                 graph.AddChain(chain);
             });
