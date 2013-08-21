@@ -27,7 +27,9 @@ namespace FubuMVC.Spark
             Search = new FileSet { DeepSearch = true };
             Search.AppendInclude("*{0}".ToFormat(Constants.DotSpark));
             Search.AppendInclude("*{0}".ToFormat(Constants.DotShade));
-            Search.AppendInclude("bindings.xml");                        
+            Search.AppendInclude("bindings.xml");
+            Search.AppendExclude("bin/*.*");
+            Search.AppendExclude("obj/*.*");
         }
 
         private void defaultComposer()
