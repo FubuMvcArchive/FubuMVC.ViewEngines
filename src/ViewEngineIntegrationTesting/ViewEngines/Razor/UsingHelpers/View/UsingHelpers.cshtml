@@ -1,0 +1,8 @@
+﻿@model ViewEngineIntegrationTesting.ViewEngines.Razor.UsingHelpers.View.UsingHelpersModel
+<h1>@Model.Message</h1>
+<p>HasLayoutWithSections.cshtml</p>
+@helper helperTest(string msg)
+{
+    <p>rendered by helper: @msg</p>
+}
+@helperTest("helper message")
