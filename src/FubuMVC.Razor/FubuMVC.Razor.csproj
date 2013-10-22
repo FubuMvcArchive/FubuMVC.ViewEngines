@@ -72,6 +72,7 @@
     <Compile Include="RazorModel\TemplateCompiler.cs" />
     <Compile Include="Rendering\PositionTagged.cs" />
     <Compile Include="Rendering\AttributeValue.cs" />
+    <Compile Include="Rendering\TemplateHelper.cs" />
     <Compile Include="TemplateFactoryCache.cs" />
     <Compile Include="RazorEngineSettings.cs" />
     <Compile Include="RazorModel\RazorParsings.cs" />

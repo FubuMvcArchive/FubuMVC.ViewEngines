@@ -60,8 +60,8 @@ namespace FubuMVC.Razor
         {
             var className = ParserHelpers.SanitizeClassName(descriptor.ViewPath);
             var baseTemplateType = _razorEngineSettings.BaseTemplateType;
-            var generatedClassContext = new GeneratedClassContext("Execute", "Write", "WriteLiteral", null, null,
-                                                                  className, "DefineSection");
+            var generatedClassContext = new GeneratedClassContext("Execute", "Write", "WriteLiteral", "WriteTo", "WriteLiteralTo",
+                                                                  "FubuMVC.Razor.Rendering.TemplateHelper", "DefineSection");
             var codeLanguage = RazorCodeLanguageFactory.Create(descriptor.Template.FilePath.FileExtension());
             var host = new RazorEngineHost(codeLanguage)
             {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -156,6 +157,37 @@ namespace FubuMVC.Razor.Rendering
             else
             {
                 WriteLiteral(WebUtility.HtmlEncode(value.ToString()));
+            }
+        }
+
+        public virtual void Write(TemplateHelper helper)
+        {
+            if (helper == null)
+                return;
+
+            helper.WriteTo(_output);
+        }
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void WriteLiteralTo(TextWriter writer, string literal)
+        {
+            if (literal == null) 
+                return;
+            writer.Write(literal);
+        }
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void WriteTo(TextWriter writer, object value)
+        {
+            if (value == null)
+                return;
+            if (value is IHtmlString)
+            {
+                writer.Write(value.ToString());
+            }
+            else
+            {
+                writer.Write(new HtmlString(value.ToString()));
             }
         }
 
