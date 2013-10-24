@@ -214,6 +214,28 @@ namespace FubuMVC.Razor.Rendering
         }
 
         [EditorBrowsable(EditorBrowsableState.Never)]
+        public void WriteAttributeTo(TextWriter writer, string name, PositionTagged<string> start, PositionTagged<string> end, params AttributeValue[] args)
+        {
+            var totalArgWritten = 0;
+            foreach (var attributeValue in args)
+            {
+                if (attributeValue.Value.Value == null)
+                    continue;
+
+                totalArgWritten++;
+                if (totalArgWritten == 1)
+                    WriteLiteralTo(writer, start.Value);
+
+                WriteTo(writer,attributeValue.Value.Value);
+            }
+
+            if (totalArgWritten > 0)
+            {
+                WriteLiteralTo(writer,end.Value);
+            }
+        }
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public void WriteLiteral(string value)
         {
             _output.Append(value);
