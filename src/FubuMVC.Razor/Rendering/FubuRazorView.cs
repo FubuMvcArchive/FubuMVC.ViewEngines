@@ -150,6 +150,8 @@ namespace FubuMVC.Razor.Rendering
         [EditorBrowsable(EditorBrowsableState.Never)]
         public void Write(object value)
         {
+            if (value == null)
+                return;
             if (value is IHtmlString)
             {
                 WriteLiteral(value.ToString());
