@@ -203,7 +203,8 @@ namespace FubuMVC.Razor.Rendering
                 totalArgWritten++;
                 if (totalArgWritten == 1)
                     WriteLiteral(start.Value);
-
+                
+                Write(attributeValue.Prefix.Value);
                 Write(attributeValue.Value.Value);
             }
 

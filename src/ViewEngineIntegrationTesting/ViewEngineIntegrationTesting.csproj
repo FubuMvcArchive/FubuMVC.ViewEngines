@@ -127,6 +127,8 @@
     <Compile Include="SharedHarnessContext.cs" />
     <Compile Include="ViewAttachment\ProfiledAttachmentTester.cs" />
     <Compile Include="ViewEngines\Razor\Activation\ActivationTest.cs" />
+    <Compile Include="ViewEngines\Razor\SettingAttributes\SettingAttributesIntegrationTester.cs" />
+    <Compile Include="ViewEngines\Razor\SettingAttributes\View\SettingAttributesEndpoint.cs" />
     <Compile Include="ViewEngines\Razor\UsingHelpers\HelperWithAttr\UsingHelpersWithAttrEndpoint.cs" />
     <Compile Include="ViewEngines\Razor\UsingHelpers\UsingHelpersIntegrationTester.cs" />
     <Compile Include="ViewEngines\Razor\UsingHelpers\View\UsingHelpersEndpoint.cs" />
@@ -176,6 +178,7 @@
     <Content Include="ViewEngines\Razor\LayoutsAndSections\Shared\Application.cshtml" />
     <Content Include="ViewEngines\Razor\UsingHelpers\View\UsingHelpers.cshtml" />
     <Content Include="ViewEngines\Razor\UsingHelpers\HelperWithAttr\UsingHelpersWithAttr.cshtml" />
+    <Content Include="ViewEngines\Razor\SettingAttributes\View\SettingAttributes.cshtml" />
     <None Include="ViewEngines\Spark\Activation\Activation.spark" />
     <None Include="ViewEngines\Spark\HelloSpark\Breathe.spark" />
     <None Include="ViewEngines\Spark\HelloSpark\Full.spark" />
