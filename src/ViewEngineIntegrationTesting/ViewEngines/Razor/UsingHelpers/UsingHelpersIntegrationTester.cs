@@ -29,7 +29,7 @@ namespace ViewEngineIntegrationTesting.ViewEngines.Razor.UsingHelpers
         {
             var text = endpoints.Get<UsingHelpersWithAttrEndpoint>(x => x.Get(new UsingHelpersWithAttrInput()))
                 .ReadAsText();
-            text.ShouldContain("<a href=\"helperWithAttribute\">rendered by helper: helperWithAttribute</a>");
+            text.ShouldContain("<a href=\"helperWithAttribute\" class=\"helperWithAttribute test\">rendered by helper: helperWithAttribute</a>");
         }
     }
 }

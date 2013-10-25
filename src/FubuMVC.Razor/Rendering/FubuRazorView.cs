@@ -225,7 +225,7 @@ namespace FubuMVC.Razor.Rendering
                 totalArgWritten++;
                 if (totalArgWritten == 1)
                     WriteLiteralTo(writer, start.Value);
-
+                WriteTo(writer, attributeValue.Prefix.Value);
                 WriteTo(writer,attributeValue.Value.Value);
             }
 
@@ -234,7 +234,7 @@ namespace FubuMVC.Razor.Rendering
                 WriteLiteralTo(writer,end.Value);
             }
         }
-
+        
         [EditorBrowsable(EditorBrowsableState.Never)]
         public void WriteLiteral(string value)
         {
