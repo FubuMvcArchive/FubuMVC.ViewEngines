@@ -127,7 +127,7 @@
     <Compile Include="SharedHarnessContext.cs" />
     <Compile Include="ViewAttachment\ProfiledAttachmentTester.cs" />
     <Compile Include="ViewEngines\Razor\Activation\ActivationTest.cs" />
-    <Compile Include="ViewEngines\Razor\SettingAttributes\UsingHelpersIntegrationTester.cs" />
+    <Compile Include="ViewEngines\Razor\SettingAttributes\SettingAttributesIntegrationTester.cs" />
     <Compile Include="ViewEngines\Razor\SettingAttributes\View\SettingAttributesEndpoint.cs" />
     <Compile Include="ViewEngines\Razor\UsingHelpers\HelperWithAttr\UsingHelpersWithAttrEndpoint.cs" />
     <Compile Include="ViewEngines\Razor\UsingHelpers\UsingHelpersIntegrationTester.cs" />
