@@ -47,6 +47,15 @@ namespace FubuMVC.Razor.Rendering
             return (T)_services[typeof(T)];
         }
 
+        public HttpContextBase Context
+        {
+            get
+            {
+                return this.Get<HttpContextBase>();
+            }
+        }
+
+
         public T GetNew<T>()
         {
             return (T)ServiceLocator.GetInstance(typeof(T));

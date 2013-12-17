@@ -29,3 +29,4 @@ bottles.cmd
 *.DotSettings
 logs
 Gemfile.lock
+fubu-content
