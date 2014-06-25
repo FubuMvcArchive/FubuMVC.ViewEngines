@@ -133,6 +133,7 @@
     <Compile Include="ViewEngines\Razor\ContextTests\View\ContextTestEndpoint.cs" />
     <Compile Include="ViewEngines\Razor\SettingAttributes\SettingAttributesIntegrationTester.cs" />
     <Compile Include="ViewEngines\Razor\SettingAttributes\View\SettingAttributesEndpoint.cs" />
+    <Compile Include="ViewEngines\Razor\UsingHelpers\HelpersMakeSureTheyEncodeHtml\HelpersMakeSureTheyEncodeHtmlEndpoint.cs" />
     <Compile Include="ViewEngines\Razor\UsingHelpers\HelperWithAttr\UsingHelpersWithAttrEndpoint.cs" />
     <Compile Include="ViewEngines\Razor\UsingHelpers\UsingHelpersIntegrationTester.cs" />
     <Compile Include="ViewEngines\Razor\UsingHelpers\View\UsingHelpersEndpoint.cs" />
@@ -185,6 +186,7 @@
     <Content Include="ViewEngines\Razor\SettingAttributes\View\SettingAttributes.cshtml" />
     <Content Include="ViewEngines\Razor\ComplexModel\View\ComplexModel.cshtml" />
     <Content Include="ViewEngines\Razor\ContextTests\View\ContextTestView.cshtml" />
+    <Content Include="ViewEngines\Razor\UsingHelpers\HelpersMakeSureTheyEncodeHtml\HelpersMakeSureTheyEncodeHtml.cshtml" />
     <None Include="ViewEngines\Spark\Activation\Activation.spark" />
     <None Include="ViewEngines\Spark\HelloSpark\Breathe.spark" />
     <None Include="ViewEngines\Spark\HelloSpark\Full.spark" />
