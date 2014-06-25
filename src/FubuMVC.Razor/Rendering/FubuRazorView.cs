@@ -198,7 +198,7 @@ namespace FubuMVC.Razor.Rendering
             }
             else
             {
-                writer.Write(new HtmlString(value.ToString()));
+                writer.Write(WebUtility.HtmlEncode(value.ToString()));
             }
         }
 
