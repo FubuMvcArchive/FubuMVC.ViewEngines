@@ -12,7 +12,12 @@
                 <a href="@msg" class="@msg test">rendered by helper: @msg</a>
             }
         </div>
+        @helpersMakeSureTheyEncodeHtml2(msg)
     }
     </div>
+}
+@helper helpersMakeSureTheyEncodeHtml2(string msg)
+{
+    <div>dont encode me @msg</div>
 }
 @helpersMakeSureTheyEncodeHtml(@Model.Message)

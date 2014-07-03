@@ -42,6 +42,7 @@ namespace ViewEngineIntegrationTesting.ViewEngines.Razor.UsingHelpers
                 .ReadAsText();
             Console.WriteLine(text);
             text.ShouldNotContain("<script>alert('hi')</script>\"");
+            text.ShouldContain("<div>dont encode me");
         }
     }
 }
