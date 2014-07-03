@@ -1,0 +1,23 @@
+﻿@model ViewEngineIntegrationTesting.ViewEngines.Razor.UsingHelpers.HelpersMakeSureTheyEncodeHtml.HelpersMakeSureTheyEncodeHtmlModel
+<h1>@Model.Message</h1>
+<p>UsingHelpersWithAttr.cshtml</p>
+@helper helpersMakeSureTheyEncodeHtml(string msg)
+    {
+    <div>
+    @if (true)
+    {
+        <div>
+            @if (true)
+            {
+                <a href="@msg" class="@msg test">rendered by helper: @msg</a>
+            }
+        </div>
+        @helpersMakeSureTheyEncodeHtml2(msg)
+    }
+    </div>
+}
+@helper helpersMakeSureTheyEncodeHtml2(string msg)
+{
+    <div>dont encode me @msg</div>
+}
+@helpersMakeSureTheyEncodeHtml(@Model.Message)

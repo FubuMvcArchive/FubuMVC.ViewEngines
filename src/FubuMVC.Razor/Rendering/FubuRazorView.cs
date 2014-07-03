@@ -192,13 +192,13 @@ namespace FubuMVC.Razor.Rendering
         {
             if (value == null)
                 return;
-            if (value is IHtmlString)
+            if (value is IHtmlString || value is TemplateHelper)
             {
                 writer.Write(value.ToString());
             }
             else
             {
-                writer.Write(new HtmlString(value.ToString()));
+                writer.Write(WebUtility.HtmlEncode(value.ToString()));
             }
         }
 
